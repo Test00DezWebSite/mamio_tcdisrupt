@@ -1,0 +1,22 @@
+{
+  "version": "1.1",
+  "name": "MAMIO TCDisrupt",
+  "launch_path": "/index.html",
+  "description": "MAMIO TCDisrupt",
+  "developer": {
+    "name": "desireyavro",
+    "url": "https://desireyavro.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "MAMIO TCDisrupt",
+      "description": "MAMIO TCDisrupt"
+    }
+  }
+}

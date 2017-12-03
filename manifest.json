@@ -1,0 +1,13 @@
+{
+    "name": "MAMIO TCDisrupt",
+    "short_name": "MAMIO TCDisrupt",
+    "display": "standalone",
+    "start_url": "/",
+    "theme_color": "#e5e5e5",
+    "background_color": "#fff",
+    "icons": [{
+        "src": "app/img/favicons/apple-touch-icon.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }]
+}
