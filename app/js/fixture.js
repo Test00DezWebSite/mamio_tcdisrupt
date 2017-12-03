@@ -96,7 +96,8 @@ $.mockjax({
             counterPartyName: 'Lieferando.de',
             paymentReference: 'der Inder am eck',
             bookingDate: '2017-05-25',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '1.png'
         },
         {
             id: 11,
@@ -105,7 +106,8 @@ $.mockjax({
             counterPartyName: 'Allianz AG',
             paymentReference: 'Leben RefNr. 765488780',
             bookingDate: '2017-05-25',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '2.png'
         },
         {
             id: 12,
@@ -114,7 +116,8 @@ $.mockjax({
             counterPartyName: 'Allianz AG',
             paymentReference: 'Rente50 RefNr. 765488779',
             bookingDate: '2017-05-26',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '2.png'
         },
         {
             id: 13,
@@ -123,7 +126,8 @@ $.mockjax({
             counterPartyName: 'JET',
             paymentReference: 'POS MIT PIN. Die Tanke Ihrer Wahl',
             bookingDate: '2017-06-04',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '1.png'
         },
         {
             id: 14,
@@ -132,7 +136,8 @@ $.mockjax({
             counterPartyName: 'Andreas Meisner',
             paymentReference: 'Taschengeld',
             bookingDate: '2017-06-05',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '1.png'
         },
         {
             id: 15,
@@ -141,7 +146,8 @@ $.mockjax({
             counterPartyName: 'Petra Meyer-Meisner',
             paymentReference: 'Unterhalt',
             bookingDate: '2017-06-05',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '1.png'
         },
         {
             id: 16,
@@ -150,7 +156,8 @@ $.mockjax({
             counterPartyName: 'Lufthansa',
             paymentReference: 'Flug DUS-SZG & RET.',
             bookingDate: '2017-06-05',
-            currencyCode: 'EUR'
+            currencyCode: 'EUR',
+            img: '1.png'
         },
         {
             id: 17,
@@ -290,7 +297,7 @@ $.mockjax({
             paymentReference: 'POS mit PIN. Rechnung 1234346458',
             bookingDate: '2017-06-18',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '3.png'
         },
         {
             id: 31,
@@ -350,7 +357,7 @@ $.mockjax({
             paymentReference: 'Leben RefNr. 765488780',
             bookingDate: '2017-06-24',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 37,
@@ -380,7 +387,7 @@ $.mockjax({
             paymentReference: 'POS mit PIN. Rechnung 1234346459',
             bookingDate: '2017-06-25',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '3.png'
         },
         {
             id: 40,
@@ -390,7 +397,7 @@ $.mockjax({
             paymentReference: 'Rente50 RefNr. 765488779',
             bookingDate: '2017-06-25',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 41,
@@ -530,7 +537,7 @@ $.mockjax({
             paymentReference: 'Leben RefNr. 765488780',
             bookingDate: '2017-07-25',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 55,
@@ -540,7 +547,7 @@ $.mockjax({
             paymentReference: 'Rente50 RefNr. 765488779',
             bookingDate: '2017-07-26',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 56,
@@ -610,7 +617,7 @@ $.mockjax({
             paymentReference: 'POS mit PIN. Rechnung 1234346460',
             bookingDate: '2017-08-09',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '3.png'
         },
         {
             id: 63,
@@ -680,7 +687,7 @@ $.mockjax({
             paymentReference: 'Leben RefNr. 765488780',
             bookingDate: '2017-08-24',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 70,
@@ -710,7 +717,7 @@ $.mockjax({
             paymentReference: 'Rente50 RefNr. 765488779',
             bookingDate: '2017-08-25',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 73,
@@ -830,7 +837,7 @@ $.mockjax({
             paymentReference: 'Leben RefNr. 765488780',
             bookingDate: '2017-09-24',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 85,
@@ -840,7 +847,7 @@ $.mockjax({
             paymentReference: 'Rente50 RefNr. 765488779',
             bookingDate: '2017-09-25',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 86,
@@ -949,7 +956,7 @@ $.mockjax({
             paymentReference: 'Leben RefNr. 765488780',
             bookingDate: '2017-10-25',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 97,
@@ -959,7 +966,7 @@ $.mockjax({
             paymentReference: 'Rente50 RefNr. 765488779',
             bookingDate: '2017-10-26',
             currencyCode: 'EUR',
-            img: '1.png'
+            img: '2.png'
         },
         {
             id: 98,

@@ -2,13 +2,13 @@ ContactManager.Views.ContactForm = Marionette.ItemView.extend({
     template: '#tpl-new-contact',
 
     ui: {
-        titleInput: '.contact-title-input',
-        contentInput: '.contact-content-input',
-        languageInput: '.contact-language-input',
-        urlInput: '.contact-url-input',
-        tagInput: '.contact-tag-input',
-        avatarInput: '.contact-avatar-input',
-        dateInput: '.contact-date-input'
+        originIbanInput: '.contact-originIban-input',
+        amountInput: '.contact-amount-input',
+        counterPartyNameInput: '.contact-counterPartyName-input',
+        paymentReferenceInput: '.contact-paymentReference-input',
+        bookingDate: '.contact-bookingDate-input',
+        imgInput: '.contact-img-input',
+        currencyCodeInput: '.contact-currencyCode-input'
     },
 
     events: {
@@ -29,13 +29,13 @@ ContactManager.Views.ContactForm = Marionette.ItemView.extend({
         e.preventDefault();
 
         this.trigger('form:submitted', {
-            title: this.ui.titleInput.val(),
-            content: this.ui.contentInput.val(),
-            language: this.ui.languageInput.val(),
-            url: this.ui.urlInput.val(),
-            tag: this.ui.tagInput.val(),
-            avatar: this.ui.avatarInput.val(),
-            date: this.ui.dateInput.val()
+            origin: this.ui.originInput.val(),
+            amount: this.ui.amountInput.val(),
+            counterPartyName: this.ui.counterPartyNameInput.val(),
+            paymentReference: this.ui.paymentReferenceInput.val(),
+            bookingDate: this.ui.bookingDateInput.val(),
+            img: this.ui.imgInput.val(),
+            currencyCode: this.ui.currencyCodeInput.val()
         });
     }
 });

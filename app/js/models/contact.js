@@ -5,6 +5,7 @@ ContactManager.Models.Contact = Backbone.Model.extend({
         counterPartyName: null,
         paymentReference: null,
         bookingDate: null,
-        currencyCode: null
+        currencyCode: null,
+        img: null
     }
 });

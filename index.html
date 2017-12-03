@@ -12,6 +12,11 @@
     <link rel="manifest" href="manifest.json" />
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
 
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <link href="app/css/main.css" rel="stylesheet">
 
     <link rel="stylesheet" href="app/css/myTopnav.css" />
@@ -126,165 +131,286 @@
                         <br><br>
                         <textarea id="responseTextArea" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
                     </div>
-                    <div class="col-xs-6 col-sm-4">
+                    <div class="col-xs-6 col-sm-4" style="display:none">
                         <p style="color:#f0f0f0" title="Text from JSON"></p>
                         <br><br>
                         <textarea id="div1" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+            <a class="btn-floating btn-large waves-effect waves-light transparent" onclick="document.getElementById('id01').style.display='block'" title="SUPPORT US !"><i class="material-icons">card_giftcard</i></a>
 
-    <br>
 
-    <!--<a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>-->
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container" style="text-align:center">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h4>This looks like some items already in your <a href="myexpenses.html">purchase </a>list</h4>
 
-    <hr>
+                        <style>
+                            div.gallery {
+                                border: 1px solid #ccc;
+                            }
+                            
+                            div.gallery:hover {
+                                border: 1px solid #777;
+                            }
+                            
+                            div.gallery img {
+                                width: 100%;
+                                height: auto;
+                            }
+                            
+                            div.desc {
+                                padding: 15px;
+                                text-align: center;
+                            }
+                            
+                            * {
+                                box-sizing: border-box;
+                            }
+                            
+                            .responsive {
+                                padding: 0 6px;
+                                float: left;
+                                width: 24.99999%;
+                            }
+                            
+                            @media only screen and (max-width: 700px) {
+                                .responsive {
+                                    width: 49.99999%;
+                                    margin: 6px 0;
+                                }
+                            }
+                            
+                            @media only screen and (max-width: 500px) {
+                                .responsive {
+                                    width: 100%;
+                                }
+                            }
+                            
+                            .clearfix:after {
+                                content: "";
+                                display: table;
+                                clear: both;
+                            }
+                        </style>
 
-    <!-- Footer -->
-    <footer id="footer">
+                        <div class="responsive">
+                            <div class="gallery">
+                                <a href="#">
+                                    <img src="app/img/faces/2.png" title="Allianz AG" width="300" height="200">
+                                </a>
+                                <div class="desc">
+                                    <a href="#">
+                                        <ul>
+                                            <li>originIban: 'DE10000000000000002726'</li>
+                                            <li>amount: '-110'</li>
+                                            <li>counterPartyName: 'Allianz AG'</li>
+                                            <li>paymentReference: 'Leben RefNr. 765488780'</li>
+                                            <li>bookingDate: '2017-05-25'</li>
+                                            <li>currencyCode: 'EUR',</li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-        <ul class="text-center">
-            <p><a href="heraspace.com">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
-            </p>
-        </ul>
+                        <div class="responsive">
+                            <div class="gallery">
+                                <a href="#">
+                                    <img src="app/img/faces/3.png" title="Kitzbüheler Apotheke" width="600" height="400">
+                                </a>
+                                <div class="desc">
+                                    <a href="#">
+                                        <ul>
+                                            <li>originIban: 'DE10000000000000002726'</li>
+                                            <li>amount: '-24.2'</li>
+                                            <li>counterPartyName: 'Kitzbüheler Apotheke'</li>
+                                            <li>paymentReference: 'POS mit PIN. Rechnung 1234346458'</li>
+                                            <li>bookingDate: '2017-06-18'</li>
+                                            <li>currencyCode: 'EUR',</li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-    </footer>
+                        <div class="responsive">
+                            <div class="gallery">
+                                <a href="#">
+                                    <img src="app/img/faces/2.png" title="Allianz AG" width="300" height="200">
+                                </a>
+                                <div class="desc">
+                                    <a href="#">
+                                        <ul>
+                                            <li>originIban: 'DE10000000000000002726'</li>
+                                            <li>amount: '-269.55'</li>
+                                            <li>counterPartyName: 'Allianz AG'</li>
+                                            <li>paymentReference: 'Rente50 RefNr. 765488779'</li>
+                                            <li>bookingDate: '2017-06-25'</li>
+                                            <li>currencyCode: 'EUR',</li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js "></script>
+                        <br>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/js/materialize.min.js"></script>
+                    </div>
 
-    <script type="text/javascript">
-        /* Recognize and read printed text in an image at the specified URL by using Microsoft Cognitive 
-         * Services OCR API.
-         * @param {string} sourceImageUrl - The URL to the image to analyze for printed text.
-         * @param {<textarea> element} responseTextArea - The text area to display the JSON string returned
-         *                             from the REST API call, or to display the error message if there was 
-         *                             an error.
-         */
+                </div>
 
-        function processImage() {
-            // **********************************************
-            // *** Update or verify the following values. ***
-            // **********************************************
+                <br>
 
-            // Add valid subscription key.
-            var subscriptionKey = "a572110ef412425fb537e93b013271bd";
+                <!--<a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>-->
 
-            // Verify the region.
-            //
-            // You must use the same region in your REST API call as you used to obtain your subscription keys.
-            // For example, if you obtained your subscription keys from the westus region, replace
-            // "westcentralus" in the URI below with "westus".
-            //
-            // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
-            // a free trial subscription key, you should not need to change this region.
-            /*var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/ocr";*/
-            var uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+                <hr>
 
-            // Request parameters.
-            var params = {
-                "language": "unk",
-                "detectOrientation ": "true",
-            };
+                <!-- Footer -->
+                <footer id="footer">
 
-            // Display the image.
-            var sourceImageUrl = document.getElementById("inputImage").value;
-            document.querySelector("#sourceImage").src = sourceImageUrl;
+                    <ul class="text-center">
+                        <p><a href="heraspace.com">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
+                        </p>
+                    </ul>
 
-            // Perform the REST API call.
-            $.ajax({
-                url: uriBase + "?" + $.param(params),
+                </footer>
 
-                // Request headers.
-                beforeSend: function(jqXHR) {
-                    jqXHR.setRequestHeader("Content-Type", "application/json");
-                    jqXHR.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-                },
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js "></script>
 
-                type: "POST",
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/js/materialize.min.js"></script>
 
-                // Request body.
-                data: '{"url": ' + '"' + sourceImageUrl + '"}',
-            })
+                <script type="text/javascript">
+                    /* Recognize and read printed text in an image at the specified URL by using Microsoft Cognitive 
+                     * Services OCR API.
+                     * @param {string} sourceImageUrl - The URL to the image to analyze for printed text.
+                     * @param {<textarea> element} responseTextArea - The text area to display the JSON string returned
+                     *                             from the REST API call, or to display the error message if there was 
+                     *                             an error.
+                     */
 
-            .done(function(data) {
-                // Show formatted JSON on webpage.
-                $("#responseTextArea").val(JSON.stringify(data, null, 2));
-            })
+                    function processImage() {
+                        // **********************************************
+                        // *** Update or verify the following values. ***
+                        // **********************************************
 
-            .fail(function(jqXHR, textStatus, errorThrown) {
-                // Display error message.
-                var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
-                errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
-                    jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
-                alert(errorString);
-            });
-        };
-    </script>
+                        // Add valid subscription key.
+                        var subscriptionKey = "a572110ef412425fb537e93b013271bd";
 
-    <script>
-        var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
-        document.getElementById("div1").innerHTML = obj.name;
-    </script>
+                        // Verify the region.
+                        //
+                        // You must use the same region in your REST API call as you used to obtain your subscription keys.
+                        // For example, if you obtained your subscription keys from the westus region, replace
+                        // "westcentralus" in the URI below with "westus".
+                        //
+                        // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
+                        // a free trial subscription key, you should not need to change this region.
+                        /*var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/ocr";*/
+                        var uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
 
-    <script>
-        $(function() {
-            if ('speechSynthesis' in window) {
-                speechSynthesis.onvoiceschanged = function() {
-                    var $voicelist = $('#voices');
+                        // Request parameters.
+                        var params = {
+                            "language": "unk",
+                            "detectOrientation ": "true",
+                        };
 
-                    if ($voicelist.find('option').length == 0) {
-                        speechSynthesis.getVoices().forEach(function(voice, index) {
-                            console.log(voice);
-                            var $option = $('<option>')
-                                .val(index)
-                                .html(voice.name + (voice.default ? ' (default)' : ''));
+                        // Display the image.
+                        var sourceImageUrl = document.getElementById("inputImage").value;
+                        document.querySelector("#sourceImage").src = sourceImageUrl;
 
-                            $voicelist.append($option);
+                        // Perform the REST API call.
+                        $.ajax({
+                            url: uriBase + "?" + $.param(params),
+
+                            // Request headers.
+                            beforeSend: function(jqXHR) {
+                                jqXHR.setRequestHeader("Content-Type", "application/json");
+                                jqXHR.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                            },
+
+                            type: "POST",
+
+                            // Request body.
+                            data: '{"url": ' + '"' + sourceImageUrl + '"}',
+                        })
+
+                        .done(function(data) {
+                            // Show formatted JSON on webpage.
+                            $("#responseTextArea").val(JSON.stringify(data, null, 2));
+                        })
+
+                        .fail(function(jqXHR, textStatus, errorThrown) {
+                            // Display error message.
+                            var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
+                            errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
+                                jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
+                            alert(errorString);
                         });
-
-                        $voicelist.material_select();
-                    }
-                }
-
-                $('#speak').click(function() {
-                    var text = $('#responseTextArea').val();
-                    var msg = new SpeechSynthesisUtterance();
-                    var voices = window.speechSynthesis.getVoices();
-                    msg.voice = voices[$('#voices').val()];
-                    msg.rate = $('#rate').val() / 10;
-                    msg.pitch = $('#pitch').val();
-                    msg.text = text;
-
-                    msg.onend = function(e) {
-                        console.log('Finished in ' + event.elapsedTime + ' seconds.');
                     };
+                </script>
 
-                    console.log(speechSynthesis);
+                <script>
+                    var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+                    document.getElementById("div1").innerHTML = obj.name;
+                </script>
 
-                    speechSynthesis.speak(msg);
-                })
-            } else {
-                $('#modal1').openModal();
-            }
-        });
-    </script>
+                <script>
+                    $(function() {
+                        if ('speechSynthesis' in window) {
+                            speechSynthesis.onvoiceschanged = function() {
+                                var $voicelist = $('#voices');
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
+                                if ($voicelist.find('option').length == 0) {
+                                    speechSynthesis.getVoices().forEach(function(voice, index) {
+                                        console.log(voice);
+                                        var $option = $('<option>')
+                                            .val(index)
+                                            .html(voice.name + (voice.default ? ' (default)' : ''));
+
+                                        $voicelist.append($option);
+                                    });
+
+                                    $voicelist.material_select();
+                                }
+                            }
+
+                            $('#speak').click(function() {
+                                var text = $('#responseTextArea').val();
+                                var msg = new SpeechSynthesisUtterance();
+                                var voices = window.speechSynthesis.getVoices();
+                                msg.voice = voices[$('#voices').val()];
+                                msg.rate = $('#rate').val() / 10;
+                                msg.pitch = $('#pitch').val();
+                                msg.text = text;
+
+                                msg.onend = function(e) {
+                                    console.log('Finished in ' + event.elapsedTime + ' seconds.');
+                                };
+
+                                console.log(speechSynthesis);
+
+                                speechSynthesis.speak(msg);
+                            })
+                        } else {
+                            $('#modal1').openModal();
+                        }
+                    });
+                </script>
+
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
 
 </body>
 
