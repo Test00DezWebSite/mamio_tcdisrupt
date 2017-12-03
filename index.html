@@ -126,6 +126,11 @@
                         <br><br>
                         <textarea id="responseTextArea" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
                     </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <p style="color:#f0f0f0" title="Text from JSON"></p>
+                        <br><br>
+                        <textarea id="div1" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
@@ -220,6 +225,11 @@
                 alert(errorString);
             });
         };
+    </script>
+
+    <script>
+        var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+        document.getElementById("div1").innerHTML = obj.name;
     </script>
 
     <script>

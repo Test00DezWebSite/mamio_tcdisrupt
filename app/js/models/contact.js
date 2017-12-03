@@ -1,12 +1,10 @@
 ContactManager.Models.Contact = Backbone.Model.extend({
     defaults: {
-        title: null,
-        content: null,
-        language: null,
-        url: null,
-        tag: null,
-        avatar: null,
-        date: null,
-        favorite: false
+        originIban: null,
+        amount: null,
+        counterPartyName: null,
+        paymentReference: null,
+        bookingDate: null,
+        currencyCode: null
     }
 });
