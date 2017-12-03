@@ -67,7 +67,7 @@
         <!--<li><a class="active" href="index.html" title="Read an image" style="color:#26a69a"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
         </li>-->
         <li>
-            <a href="" title="My Profile" style="color:#26a69a"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+            <a href="#" title="My Profile" style="color:#26a69a"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
         </li>
         <li>
             <a href="myexpenses.html" title="My Expenses" style="color:#26a69a"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
@@ -94,6 +94,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="myexpenses.html" target="_top" title="My Expenses"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
                     </li>
+        <li class="icon">
+            <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        </li>
                 </ul>
             </div>
 
@@ -111,7 +114,7 @@
                         <p style="color:#f0f0f0"><input type="text" name="inputImage" id="inputImage" placeholder="Image URL" title="Enter image URL to read" style="color:lightgray" />
                         </p>
                     </div>
-                    <!-- ex. https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Hypokalemic_Periodic_Paralysis_Medicines_in_Pakistan.JPG/640px-Hypokalemic_Periodic_Paralysis_Medicines_in_Pakistan.JPG-->
+                    <!-- ex. https://pbs.twimg.com/media/BTcm-pRCAAAQI7i.jpg-->
                     <div class="col-xs-6 col-sm-4">
                         <button class="btn btn-info btn-sm" onclick="processImage()" id="readimage"> CLICK HERE </button>
                     </div>
@@ -131,286 +134,171 @@
                         <br><br>
                         <textarea id="responseTextArea" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
                     </div>
-                    <div class="col-xs-6 col-sm-4" style="display:none">
-                        <p style="color:#f0f0f0" title="Text from JSON"></p>
+                    <div class="col-xs-6 col-sm-4">
+                        <p style="color:#84b6f0" title="Text from JSON"></p>
                         <br><br>
                         <textarea id="div1" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
                     </div>
                 </div>
             </div>
 
-            <a class="btn-floating btn-large waves-effect waves-light transparent" onclick="document.getElementById('id01').style.display='block'" title="SUPPORT US !"><i class="material-icons">card_giftcard</i></a>
+            <br>
 
+        </div>
 
-            <div id="id01" class="w3-modal">
-                <div class="w3-modal-content">
-                    <div class="w3-container" style="text-align:center">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <h4>This looks like some items already in your <a href="myexpenses.html">purchase </a>list</h4>
+    </div>
 
-                        <style>
-                            div.gallery {
-                                border: 1px solid #ccc;
-                            }
-                            
-                            div.gallery:hover {
-                                border: 1px solid #777;
-                            }
-                            
-                            div.gallery img {
-                                width: 100%;
-                                height: auto;
-                            }
-                            
-                            div.desc {
-                                padding: 15px;
-                                text-align: center;
-                            }
-                            
-                            * {
-                                box-sizing: border-box;
-                            }
-                            
-                            .responsive {
-                                padding: 0 6px;
-                                float: left;
-                                width: 24.99999%;
-                            }
-                            
-                            @media only screen and (max-width: 700px) {
-                                .responsive {
-                                    width: 49.99999%;
-                                    margin: 6px 0;
-                                }
-                            }
-                            
-                            @media only screen and (max-width: 500px) {
-                                .responsive {
-                                    width: 100%;
-                                }
-                            }
-                            
-                            .clearfix:after {
-                                content: "";
-                                display: table;
-                                clear: both;
-                            }
-                        </style>
+    <br>
 
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a href="#">
-                                    <img src="app/img/faces/2.png" title="Allianz AG" width="300" height="200">
-                                </a>
-                                <div class="desc">
-                                    <a href="#">
-                                        <ul>
-                                            <li>originIban: 'DE10000000000000002726'</li>
-                                            <li>amount: '-110'</li>
-                                            <li>counterPartyName: 'Allianz AG'</li>
-                                            <li>paymentReference: 'Leben RefNr. 765488780'</li>
-                                            <li>bookingDate: '2017-05-25'</li>
-                                            <li>currencyCode: 'EUR',</li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <!--<a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>-->
 
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a href="#">
-                                    <img src="app/img/faces/3.png" title="Kitzbüheler Apotheke" width="600" height="400">
-                                </a>
-                                <div class="desc">
-                                    <a href="#">
-                                        <ul>
-                                            <li>originIban: 'DE10000000000000002726'</li>
-                                            <li>amount: '-24.2'</li>
-                                            <li>counterPartyName: 'Kitzbüheler Apotheke'</li>
-                                            <li>paymentReference: 'POS mit PIN. Rechnung 1234346458'</li>
-                                            <li>bookingDate: '2017-06-18'</li>
-                                            <li>currencyCode: 'EUR',</li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <hr>
 
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a href="#">
-                                    <img src="app/img/faces/2.png" title="Allianz AG" width="300" height="200">
-                                </a>
-                                <div class="desc">
-                                    <a href="#">
-                                        <ul>
-                                            <li>originIban: 'DE10000000000000002726'</li>
-                                            <li>amount: '-269.55'</li>
-                                            <li>counterPartyName: 'Allianz AG'</li>
-                                            <li>paymentReference: 'Rente50 RefNr. 765488779'</li>
-                                            <li>bookingDate: '2017-06-25'</li>
-                                            <li>currencyCode: 'EUR',</li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Footer -->
+    <footer id="footer">
 
-                        <br>
+        <ul class="text-center">
+            <p><a href="heraspace.com">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
+            </p>
+        </ul>
 
-                    </div>
+    </footer>
 
-                </div>
+    <!-- script awesometable -->
+    <script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
 
-                <br>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js "></script>
 
-                <!--<a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/js/materialize.min.js"></script>
 
-                <hr>
+    <script type="text/javascript">
+        /* Recognize and read printed text in an image at the specified URL by using Microsoft Cognitive 
+         * Services OCR API.
+         * @param {string} sourceImageUrl - The URL to the image to analyze for printed text.
+         * @param {<textarea> element} responseTextArea - The text area to display the JSON string returned
+         *                             from the REST API call, or to display the error message if there was 
+         *                             an error.
+         */
 
-                <!-- Footer -->
-                <footer id="footer">
+        function processImage() {
+            // **********************************************
+            // *** Update or verify the following values. ***
+            // **********************************************
 
-                    <ul class="text-center">
-                        <p><a href="heraspace.com">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
-                        </p>
-                    </ul>
+            // Add valid subscription key.
+            var subscriptionKey = "a572110ef412425fb537e93b013271bd";
 
-                </footer>
+            // Verify the region.
+            //
+            // You must use the same region in your REST API call as you used to obtain your subscription keys.
+            // For example, if you obtained your subscription keys from the westus region, replace
+            // "westcentralus" in the URI below with "westus".
+            //
+            // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
+            // a free trial subscription key, you should not need to change this region.
+            /*var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/ocr";*/
+            var uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
 
-                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js "></script>
+            // Request parameters.
+            var params = {
+                "language": "unk",
+                "detectOrientation ": "true",
+            };
 
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/js/materialize.min.js"></script>
+            // Display the image.
+            var sourceImageUrl = document.getElementById("inputImage").value;
+            document.querySelector("#sourceImage").src = sourceImageUrl;
 
-                <script type="text/javascript">
-                    /* Recognize and read printed text in an image at the specified URL by using Microsoft Cognitive 
-                     * Services OCR API.
-                     * @param {string} sourceImageUrl - The URL to the image to analyze for printed text.
-                     * @param {<textarea> element} responseTextArea - The text area to display the JSON string returned
-                     *                             from the REST API call, or to display the error message if there was 
-                     *                             an error.
-                     */
+            // Perform the REST API call.
+            $.ajax({
+                url: uriBase + "?" + $.param(params),
 
-                    function processImage() {
-                        // **********************************************
-                        // *** Update or verify the following values. ***
-                        // **********************************************
+                // Request headers.
+                beforeSend: function(jqXHR) {
+                    jqXHR.setRequestHeader("Content-Type", "application/json");
+                    jqXHR.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                },
 
-                        // Add valid subscription key.
-                        var subscriptionKey = "a572110ef412425fb537e93b013271bd";
+                type: "POST",
 
-                        // Verify the region.
-                        //
-                        // You must use the same region in your REST API call as you used to obtain your subscription keys.
-                        // For example, if you obtained your subscription keys from the westus region, replace
-                        // "westcentralus" in the URI below with "westus".
-                        //
-                        // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
-                        // a free trial subscription key, you should not need to change this region.
-                        /*var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/ocr";*/
-                        var uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+                // Request body.
+                data: '{"url": ' + '"' + sourceImageUrl + '"}',
+            })
 
-                        // Request parameters.
-                        var params = {
-                            "language": "unk",
-                            "detectOrientation ": "true",
-                        };
+            .done(function(data) {
+                // Show formatted JSON on webpage.
+                $("#responseTextArea").val(JSON.stringify(data, null, 2));
+            })
 
-                        // Display the image.
-                        var sourceImageUrl = document.getElementById("inputImage").value;
-                        document.querySelector("#sourceImage").src = sourceImageUrl;
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                // Display error message.
+                var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
+                errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
+                    jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
+                alert(errorString);
+            });
+        };
+    </script>
 
-                        // Perform the REST API call.
-                        $.ajax({
-                            url: uriBase + "?" + $.param(params),
+    <script>
+        var obj = JSON.parse('{ "name":"Mercury Drug LAS PINAS 6ooeurpos", "amount":600, "city":"LAS PINAS BF Resort"}');
+        document.getElementById("div1").innerHTML = obj.name;
+    </script>
 
-                            // Request headers.
-                            beforeSend: function(jqXHR) {
-                                jqXHR.setRequestHeader("Content-Type", "application/json");
-                                jqXHR.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-                            },
+    <script>
+        $(function() {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.onvoiceschanged = function() {
+                    var $voicelist = $('#voices');
 
-                            type: "POST",
+                    if ($voicelist.find('option').length == 0) {
+                        speechSynthesis.getVoices().forEach(function(voice, index) {
+                            console.log(voice);
+                            var $option = $('<option>')
+                                .val(index)
+                                .html(voice.name + (voice.default ? ' (default)' : ''));
 
-                            // Request body.
-                            data: '{"url": ' + '"' + sourceImageUrl + '"}',
-                        })
-
-                        .done(function(data) {
-                            // Show formatted JSON on webpage.
-                            $("#responseTextArea").val(JSON.stringify(data, null, 2));
-                        })
-
-                        .fail(function(jqXHR, textStatus, errorThrown) {
-                            // Display error message.
-                            var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
-                            errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
-                                jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
-                            alert(errorString);
+                            $voicelist.append($option);
                         });
-                    };
-                </script>
 
-                <script>
-                    var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
-                    document.getElementById("div1").innerHTML = obj.name;
-                </script>
-
-                <script>
-                    $(function() {
-                        if ('speechSynthesis' in window) {
-                            speechSynthesis.onvoiceschanged = function() {
-                                var $voicelist = $('#voices');
-
-                                if ($voicelist.find('option').length == 0) {
-                                    speechSynthesis.getVoices().forEach(function(voice, index) {
-                                        console.log(voice);
-                                        var $option = $('<option>')
-                                            .val(index)
-                                            .html(voice.name + (voice.default ? ' (default)' : ''));
-
-                                        $voicelist.append($option);
-                                    });
-
-                                    $voicelist.material_select();
-                                }
-                            }
-
-                            $('#speak').click(function() {
-                                var text = $('#responseTextArea').val();
-                                var msg = new SpeechSynthesisUtterance();
-                                var voices = window.speechSynthesis.getVoices();
-                                msg.voice = voices[$('#voices').val()];
-                                msg.rate = $('#rate').val() / 10;
-                                msg.pitch = $('#pitch').val();
-                                msg.text = text;
-
-                                msg.onend = function(e) {
-                                    console.log('Finished in ' + event.elapsedTime + ' seconds.');
-                                };
-
-                                console.log(speechSynthesis);
-
-                                speechSynthesis.speak(msg);
-                            })
-                        } else {
-                            $('#modal1').openModal();
-                        }
-                    });
-                </script>
-
-                <script>
-                    function myFunction() {
-                        var x = document.getElementById("myTopnav");
-                        if (x.className === "topnav") {
-                            x.className += " responsive";
-                        } else {
-                            x.className = "topnav";
-                        }
+                        $voicelist.material_select();
                     }
-                </script>
+                }
+
+                $('#speak').click(function() {
+                    var text = $('#responseTextArea').val();
+                    var msg = new SpeechSynthesisUtterance();
+                    var voices = window.speechSynthesis.getVoices();
+                    msg.voice = voices[$('#voices').val()];
+                    msg.rate = $('#rate').val() / 10;
+                    msg.pitch = $('#pitch').val();
+                    msg.text = text;
+
+                    msg.onend = function(e) {
+                        console.log('Finished in ' + event.elapsedTime + ' seconds.');
+                    };
+
+                    console.log(speechSynthesis);
+
+                    speechSynthesis.speak(msg);
+                })
+            } else {
+                $('#modal1').openModal();
+            }
+        });
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 
 </body>
 
