@@ -14,6 +14,8 @@
 
     <link href="app/css/main.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="app/css/myTopnav.css" />
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -63,7 +65,25 @@
 
 <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-static-top bg-faded">
+    <ul class="topnav" id="myTopnav">
+        <li>
+            <a href="index.html" title="Read an image" style="color:#26a69a">
+                <img alt="Brand" src="app/img/favicons/favicon-32x32.png"></a>
+        </li>
+        <!--<li><a href="index.html" title="Read an image" style="color:#26a69a"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+            </li>-->
+        <li>
+            <a href="" title="My Profile" style="color:#26a69a"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a class="active" href="myexpenses.html" title="My Expenses" style="color:#26a69a"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
+        </li>
+        <li class="icon">
+            <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        </li>
+    </ul>
+
+    <!--<nav class="navbar navbar-toggleable-md navbar-static-top bg-faded">
         <div class="container">
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +104,7 @@
             </div>
 
         </div>
-    </nav>
+    </nav>-->
 
     <header class="tx-header">
         <div class="container">
@@ -106,7 +126,7 @@
 
     <br>
 
-    <a href="index.html" class="btn btn-lg btn-outline center-block" title="Home" style="background-color:transparent; color:#26a69a"><i class="fa fa-home" aria-hidden="true"></i></a>
+    <!--<a href="index.html" class="btn btn-lg btn-outline center-block" title="Home" style="background-color:transparent; color:#26a69a"><i class="fa fa-home" aria-hidden="true"></i></a>-->
 
     <hr>
 
@@ -124,7 +144,6 @@
     <script type="text/template" id="tpl-contacts">
         <br>
         <p class="text-center">
-            <!--<a href="#contacts/new" class="btn-floating btn-large waves-effect waves-light" title="Add article"><i class="material-icons">add</i></a>-->
         </p>
         </br>
         <ul class="media-list contacts-container"></ul>
@@ -321,6 +340,18 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
 </body>
 
 </html>

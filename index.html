@@ -14,6 +14,8 @@
 
     <link href="app/css/main.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="app/css/myTopnav.css" />
+
     <!-- bootstrap & font awesome components -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -52,7 +54,25 @@
 
 <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-static-top bg-faded">
+    <ul class="topnav" id="myTopnav">
+        <li>
+            <a class="active" href="index.html" title="Read an image" style="color:#26a69a">
+                <img alt="Brand" src="app/img/favicons/favicon-32x32.png"></a>
+        </li>
+        <!--<li><a class="active" href="index.html" title="Read an image" style="color:#26a69a"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+        </li>-->
+        <li>
+            <a href="" title="My Profile" style="color:#26a69a"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="myexpenses.html" title="My Expenses" style="color:#26a69a"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
+        </li>
+        <li class="icon">
+            <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        </li>
+    </ul>
+
+    <!--<nav class="navbar navbar-toggleable-md navbar-static-top bg-faded">
         <div class="container">
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,13 +87,13 @@
                         <a class="nav-link" href="index.html" title="Read an image"><i class="fa fa-home"> </i><span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="myexpenses.html" target="_top" title="Expenses"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
+                        <a class="nav-link" href="myexpenses.html" target="_top" title="My Expenses"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
 
         </div>
-    </nav>
+    </nav>-->
 
     <div class="page">
         <div class="title" style="color:#f0f0f0">
@@ -83,7 +103,7 @@
             <div class="userInterface">
                 <div class="row">
                     <div class="col-xs-6 col-sm-4">
-                        <p style="color:#f0f0f0"><input type="text" name="inputImage" id="inputImage" placeholder="Image URL..." title="Enter image URL to read" style="color:lightgray" />
+                        <p style="color:#f0f0f0"><input type="text" name="inputImage" id="inputImage" placeholder="Image URL" title="Enter image URL to read" style="color:lightgray" />
                         </p>
                     </div>
                     <!-- ex. https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Hypokalemic_Periodic_Paralysis_Medicines_in_Pakistan.JPG/640px-Hypokalemic_Periodic_Paralysis_Medicines_in_Pakistan.JPG-->
@@ -114,7 +134,7 @@
 
     <br>
 
-    <a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>
+    <!--<a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>-->
 
     <hr>
 
@@ -243,6 +263,17 @@
                 $('#modal1').openModal();
             }
         });
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
     </script>
 
 </body>
