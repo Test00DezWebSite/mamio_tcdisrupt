@@ -6,7 +6,7 @@ ContactManager.Views.ContactForm = Marionette.ItemView.extend({
         amountInput: '.contact-amount-input',
         counterPartyNameInput: '.contact-counterPartyName-input',
         paymentReferenceInput: '.contact-paymentReference-input',
-        bookingDate: '.contact-bookingDate-input',
+        bookingDateInput: '.contact-bookingDate-input',
         imgInput: '.contact-img-input',
         currencyCodeInput: '.contact-currencyCode-input'
     },
@@ -29,7 +29,7 @@ ContactManager.Views.ContactForm = Marionette.ItemView.extend({
         e.preventDefault();
 
         this.trigger('form:submitted', {
-            origin: this.ui.originInput.val(),
+            originIban: this.ui.originIbanInput.val(),
             amount: this.ui.amountInput.val(),
             counterPartyName: this.ui.counterPartyNameInput.val(),
             paymentReference: this.ui.paymentReferenceInput.val(),

@@ -23,8 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <!-- bootstrap & font awesome components -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- end bootstrap -->
 
     <!-- materialize css -->
@@ -71,7 +72,7 @@
                 <img alt="Brand" src="app/img/favicons/favicon-32x32.png"></a>
         </li>
         <!--<li><a href="index.html" title="Read an image" style="color:#26a69a"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
-            </li>-->
+                </li>-->
         <li>
             <a href="" title="My Profile" style="color:#26a69a"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
         </li>
@@ -84,11 +85,30 @@
 
 
     </ul>
-    <div data-type="AwesomeTableView" data-viewID="-KhlMUBGMamLdBTl9bIa"></div>
+    <!--<div data-type="AwesomeTableView" data-viewID="-KhlMUBGMamLdBTl9bIa"></div>-->
 
     <br>
 
-    <!--<a href="index.html" class="btn btn-lg btn-outline center-block" title="Home" style="background-color:transparent; color:#26a69a"><i class="fa fa-home" aria-hidden="true"></i></a>-->
+    <header class="tx-header">
+        <div class="container">
+
+            <h1></h1>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 main-container">
+                <iframe width="560" height="315" src="https://rapid-math.glitch.me" frameborder="0" allowfullscreen>
+                    </iframe>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <a href="index.html" class="btn btn-lg btn-outline center-block" title="Home" style="background-color:transparent; color:#26a69a"><i class="fa fa-home" aria-hidden="true"></i></a>
 
     <hr>
 
@@ -99,11 +119,244 @@
             <p><a href="heraspace.com">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
             </p>
         </ul>
+    </footer>
 
 
 
-        <!-- script awesometable -->
-        <script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
+    <!-- script awesometable -->
+    <!--<script src="https://awesome-table.com/AwesomeTableInclude.js"></script>-->
+
+
+    <script type="text/template" id="tpl-contacts">
+        <br>
+        <p class="text-center">
+            <a href="#contacts/new" class="btn-floating btn-large waves-effect waves-light" title="Add article"><i class="material-icons">add</i></a>
+            <!--<a href="#contacts/new" class="btn btn-lg btn-outline" title="Add Contact"><i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i></a>-->
+        </p>
+        </br>
+        <ul class="media-list contacts-container"></ul>
+    </script>
+
+    <script type="text/template" id="tpl-contact">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <a href="#contacts/detail/<%- id %>">
+                    <img class="media-object" src="app/img/faces/<%- avatar %>">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                <div class="media-heading">
+                    <h3>
+                        <%- amount %>
+                    </h3>
+                    </a>
+                            <a href="#contacts/edit/<%- id %>" class="edit-contract"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true" title="edit"></i></a>
+                            <a href="#contacts/delete/<%- id %>" class="delete-contract"><i class="fa fa-times fa-2x" aria-hidden="true" title="delete"></i></a>
+                            <!--<a href="#contacts/favorite/<%- id %>"><i class="heart fa fa-heart-o fa-2x" aria-hidden="true" title="consensus like"></i></a>-->
+                        </div>
+                        <div>Origin Iban<strong>
+                        <%- originIban %></strong>
+                        </div>
+                        <div><i>
+                                    <%- bookingDate %></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!--<script>
+                    $(".heart.fa").click(function() {
+                        $(this).toggleClass("fa-heart fa-heart-o");
+                    });
+                </script>-->
+
+    <script type="text/template" id="tpl-contact-detail">
+        <br>
+        </br>
+        <div class="text-center">
+            <img class="tx-image" src="app/img/faces/<%- avatar %>">
+            <h3><strong>
+                <%- amount %></strong>
+            </h3>
+            <code>Counterparty name
+                        <%- counterPartyName %>
+                    </code>
+            <br>
+            <div>Payment reference:
+                <%- paymentReference %>
+            </div>
+            <div>
+                <%- currencyCode %>
+            </div>
+            <div>Origin Iban:<strong>
+                        <%- originIban %></strong>
+            </div>
+            <div><i>
+                        <%- bookingDate %>
+                    </i></div>
+            <br>
+            <a href="#contacts" class="btn btn-lg btn-outline">Back</a>
+            <!--<a href="#" class="btn btn-lg btn-outline" title="Support Transparency">Support</a>-->
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" style="color:#26a69a">Suggestions</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <H4>Users Who Purchased This Also Consulted</H4>
+                            <div id="recDiv">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </br>
+        </div>
+    </script>
+
+
+
+    <script type="text/template" id="tpl-new-contact">
+        <h2 class="page-header text-center">
+            <%= isNew ? 'Create' : 'Edit' %> Media</h2>
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="form" class="form-horizontal contact-form">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Origin Iban:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control contact-originIban-input" id="contact_originIban_required" value="<%- originIban %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Amount:</label>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control contact-amount-input" value="<%- amount %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Counterparty name:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control contact-counterPartyName-input" value="<%- counterPartyName %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Payment reference:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control contact-paymentReference-input" value="<%- paymentReference %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Booking date:</label>
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control contact-bookingDate-input" id="contact_bookingDate_required" value="<%- bookingDate %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" title="upload image_profile.png">Image (.png):</label>
+                            <div class="col-sm-6">
+                                <input type="file" class="form-control contact-img-input" id="contact_img_required" value="<%- img %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Currency code:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control contact-currencyCode-input" value="<%- currencyCode %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-3">
+                                <button type="submit" class="btn btn-outline btn-lg btn-block">Submit</button>
+                            </div>
+                            <div class="col-sm-3">
+                                <a href="#contacts" class="btn btn-outline btn-lg btn-block form-cancel-btn">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                    <script>
+                        $(function() {
+                            $("#contact_title_required").prop('required', true);
+                            $("#contact_tag_required").prop('required', true);
+                            $("#contact_image_required").prop('required', true)
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="tpl-delete-contact">
+        <br>
+        </br>
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="text-center">
+                        Delete<code>
+                                <%- amount %></code>?
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    <div class="text-center">
+                        <button class="js-delete-yes" style="color:#008CBA">Yes</button>
+                        <button class="js-delete-no" style="color:#4CAF50">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/1.6.1/backbone.marionette.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.7/backbone.localStorage-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.mockjax/2.2.1/jquery.mockjax.min.js"></script>
+
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/fixture.js"></script>
+    <script src="app/js/models/contact.js"></script>
+    <script src="app/js/collections/contacts.js"></script>
+    <script src="app/js/views/contact.js"></script>
+    <script src="app/js/views/contacts.js"></script>
+    <script src="app/js/views/contactForm.js"></script>
+    <script src="app/js/views/contactDetail.js"></script>
+    <script src="app/js/views/contactDelete.js"></script>
+    <script src="app/js/controller.js"></script>
+    <script src="app/js/router.js"></script>
+
+    <script>
+        $(function() {
+            ContactManager.start();
+        });
+    </script>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/js/materialize.min.js"></script>-->
 
 </body>
 
