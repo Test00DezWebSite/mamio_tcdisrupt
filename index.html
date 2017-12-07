@@ -129,12 +129,12 @@
                         <img id="sourceImage" style="max-width:380px; height:400px;background-color:transparent;" />
                     </div>
                     <!--<div id="jsonOutput" style="max-width:400px; display:table-cell;">-->
-                    <div class="col-xs-6 col-sm-4" style="display:none">
+                    <div class="col-xs-6 col-sm-4">
                         <p style="color:#f0f0f0" title="JSON Response"></p>
                         <br><br>
                         <textarea id="responseTextArea" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
                     </div>
-                    <div class="col-xs-6 col-sm-4">
+                    <div class="col-xs-6 col-sm-4" style="display:none">
                         <p style="color:#84b6f0" title="Text from JSON"></p>
                         <br><br>
                         <textarea id="div1" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
@@ -242,7 +242,7 @@
     </script>
 
     <script>
-        var obj = JSON.parse('{ "name":"Mercury Drug LAS PINAS 6ooeurpos", "amount":600, "city":"LAS PINAS BF Resort"}');
+        var obj = JSON.parse('{ "name":"Mercury Drug LAS PINAS 6ooeuros", "amount":600, "city":"LAS PINAS BF Resort"}');
         document.getElementById("div1").innerHTML = obj.name;
     </script>
 
