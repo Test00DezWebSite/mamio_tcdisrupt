@@ -17,9 +17,9 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <link href="app/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="app/css/myTopnav.css" />
+    <link rel="stylesheet" href="assets/css/myTopnav.css" />
 
     <!-- bootstrap & font awesome components -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -27,11 +27,11 @@
     <!-- end bootstrap -->
 
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="app/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="app/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="app/img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="app/img/favicons/manifest.json">
-    <link rel="mask-icon" href="app/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
     <!-- materialize css -->
@@ -62,7 +62,7 @@
     <ul class="topnav" id="myTopnav">
         <li>
             <a class="active" href="index.html" title="Read an image" style="color:#26a69a">
-                <img alt="Brand" src="app/img/favicons/favicon-32x32.png"></a>
+                <img alt="Brand" src="assets/img/favicons/favicon-32x32.png"></a>
         </li>
         <!--<li><a class="active" href="index.html" title="Read an image" style="color:#26a69a"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
         </li>-->
@@ -77,32 +77,6 @@
         </li>
     </ul>
 
-    <!--<nav class="navbar navbar-toggleable-md navbar-static-top bg-faded">
-        <div class="container">
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="app/img/favicons/favicon-32x32.png">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html" title="Read an image"><i class="fa fa-home"> </i><span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="myexpenses.html" target="_top" title="My Expenses"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
-                    </li>
-        <li class="icon">
-            <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
-        </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>-->
-
     <div class="page">
         <div class="title" style="color:#f0f0f0">
             <h2></h2>
@@ -116,7 +90,7 @@
                     </div>
                     <!-- ex. https://pbs.twimg.com/media/BTcm-pRCAAAQI7i.jpg-->
                     <div class="col-xs-6 col-sm-4">
-                        <button class="btn btn-info btn-sm" onclick="processImage()" id="readimage"> CLICK HERE </button>
+                        <button class="btn btn-info btn-sm" onclick="processImage()" id="readimage"> READ IMAGE </button>
                     </div>
                 </div>
                 <br><br>
@@ -129,7 +103,7 @@
                         <img id="sourceImage" style="max-width:380px; height:400px;background-color:transparent;" />
                     </div>
                     <!--<div id="jsonOutput" style="max-width:400px; display:table-cell;">-->
-                    <div class="col-xs-6 col-sm-4">
+                    <div class="col-xs-6 col-sm-4" style="display:none">
                         <p style="color:#f0f0f0" title="JSON Response"></p>
                         <br><br>
                         <textarea id="responseTextArea" class="UIInput" style="max-width:380px; height:400px;background-color:transparent; color:#f0f0f0"></textarea>
@@ -150,22 +124,17 @@
 
     <br>
 
-    <!--<a href="myexpenses.html" class="btn btn-lg btn-outline center-block" title="Expenses" style="background-color:transparent; color:#26a69a"><i class="fa fa-line-chart" aria-hidden="true"></i></a>-->
-
     <hr>
 
     <!-- Footer -->
     <footer id="footer">
 
         <ul class="text-center">
-            <p><a href="heraspace.com">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
+            <p><a href="mamiodev.github.io">MAMIO TCDisrupt</a> &copy; 2017 - made for TCDisrupt with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i>
             </p>
         </ul>
 
     </footer>
-
-    <!-- script awesometable -->
-    <script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js "></script>
 
@@ -182,9 +151,6 @@
          */
 
         function processImage() {
-            // **********************************************
-            // *** Update or verify the following values. ***
-            // **********************************************
 
             // Add valid subscription key.
             var subscriptionKey = "a572110ef412425fb537e93b013271bd";
@@ -207,6 +173,7 @@
             };
 
             // Display the image.
+            // TO DO: proceed the same way for image stored / taken from the hardware
             var sourceImageUrl = document.getElementById("inputImage").value;
             document.querySelector("#sourceImage").src = sourceImageUrl;
 
@@ -242,11 +209,13 @@
     </script>
 
     <script>
-        var obj = JSON.parse('{ "name":"Mercury Drug LAS PINAS 6ooeuros", "amount":600, "city":"LAS PINAS BF Resort"}');
+        // text extracted from a specific image url for hackathon demo
+        var obj = JSON.parse('{ "name":"Mercury Drug LAS PINAS 6ooeurpos", "amount":600, "city":"LAS PINAS BF Resort"}');
         document.getElementById("div1").innerHTML = obj.name;
     </script>
 
     <script>
+        // Speech recognition
         $(function() {
             if ('speechSynthesis' in window) {
                 speechSynthesis.onvoiceschanged = function() {

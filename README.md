@@ -1,10 +1,10 @@
-# :mag: HeraSpace Media Smart Search
+# :mag: MAMIO demo for #TCDisrupt
 
-Web application for smart search on pre-build text index with semantic article description
+Web application for image recognition + text-to-speech, and user dashboard
 
 ## demo
 
-![Alt text](app/img/heraspacemedia_shortdemo.gif?raw=true "Gif short demo")
+![Alt text](assets/img/mamio_tcdisrupt/gif-demo.gif?raw=true "Gif short demo")
 
 
 
@@ -14,7 +14,6 @@ Web application for smart search on pre-build text index with semantic article d
 
 ## TO DO
 
-* Text extraction from video with neural net & semantic search on results
-* Blockchain logic on likes (upvotes)
-
-* Recommendations on items consultated
+* Fetch images from mobile device hardware (instead of image url)
+* AI algorithm for image file processing
+* Add json parser + http request
